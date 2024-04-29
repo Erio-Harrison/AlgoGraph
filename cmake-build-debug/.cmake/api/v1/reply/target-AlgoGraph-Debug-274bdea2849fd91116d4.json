@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "AlgoGraph.exe"
-		},
-		{
-			"path" : "AlgoGraph.pdb"
+			"path" : "AlgoGraph"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -52,7 +49,9 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -68,16 +67,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "AlgoGraph",
-	"nameOnDisk" : "AlgoGraph.exe",
+	"nameOnDisk" : "AlgoGraph",
 	"paths" : 
 	{
 		"build" : ".",
@@ -89,16 +84,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
-			]
-		},
-		{
-			"name" : "",
-			"sourceIndexes" : 
-			[
+				0,
 				1,
-				2,
-				3
+				2
 			]
 		}
 	],
@@ -107,23 +95,20 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "acwing/Dijkstra1.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "competition",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "acwing/Dijkstra2.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "leetcode",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "acwing",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "leetcode/lee2923.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"
