@@ -37,18 +37,3 @@ vector<vector<string>> solveNQueens(int n) {
     backtrack(0, n);
     return solutions;
 }
-
-int main() {
-    int n;
-    cout << "Enter the number of queens: ";
-    cin >> n;
-    vector<vector<string>> result = solveNQueens(n);
-
-    for (const auto& solution : result) {
-        for (const auto& line : solution) {
-            cout << line << endl;
-        }
-        cout << endl;
-    }
-    return 0;
-}
