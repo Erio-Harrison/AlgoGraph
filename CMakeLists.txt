@@ -4,9 +4,12 @@ project(AlgoGraph)
 set(CMAKE_CXX_STANDARD 20)
 
 file(GLOB_RECURSE SOURCES
-        "competition/*.cpp"
+        "others/*.cpp"
         "leetcode/*.cpp"
         "acwing/*.cpp"
 )
 
-add_executable(AlgoGraph ${SOURCES})
+add_executable(AlgoGraph ${SOURCES}
+        acwing
+        leetcode
+        others)

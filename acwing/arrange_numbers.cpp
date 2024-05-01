@@ -26,16 +26,3 @@ void solveNumbers(int n) {
     state = vector<int>(n, 0);
     dfs(0, n);
 }
-int main() {
-    int n;
-    cout << "Enter the number of numbers: ";
-    cin >> n;
-    solveNumbers(n);
-    for (vector<int> solution: solutions) {
-        for (int i: solution) {
-            cout << i << " ";
-        }
-        cout << endl;
-    }
-    return 0;
-}
