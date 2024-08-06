@@ -33,7 +33,7 @@ void bellman_ford(){
         cout << dist[n] << endl;
     }
 }
-
+/*
 int main(){
     scanf("%d%d%d", &n, &m, &k);
 
@@ -47,3 +47,4 @@ int main(){
     bellman_ford();
     return 0;
 }
+*/

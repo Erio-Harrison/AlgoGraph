@@ -33,13 +33,14 @@ public:
         return (x >= 0 && y >= 0 && x < width && y < height && grid[y][x] == 0);
     }
 
-    int heuristic(int x, int y, int targetX, int targetY) {
-        // Manhattan distance
-        return abs(x - targetX) + abs(y - targetY);
-    }
 
     vector<pair<int, int>> findPath(int startX, int startY, int targetX, int targetY) {
-        priority_queue<Node, vector<Node>, greater<Node>> nodes;
+
+        auto heuristic = [](int x, int y, int targetX, int targetY){
+            return std::hypot(targetX-x, targetY - y);
+        };
+
+        priority_queue<Node, vector<Node>, greater<>> nodes;
         nodes.emplace(startX, startY, 0, heuristic(startX, startY, targetX, targetY));
         vector<vector<bool>> visited(height, vector<bool>(width, false));
         vector<vector<pair<int, int>>> parent(height, vector<pair<int, int>>(width, {-1, -1}));
@@ -73,7 +74,7 @@ private:
     int width, height;
     vector<vector<int>> grid;
 
-    vector<pair<int, int>> reconstructPath(vector<vector<pair<int, int>>>& parent, int targetX, int targetY) {
+    static vector<pair<int, int>> reconstructPath(vector<vector<pair<int, int>>>& parent, int targetX, int targetY) {
         vector<pair<int, int>> path;
         for (pair<int, int> at = {targetX, targetY}; at.first != -1; at = parent[at.second][at.first]) {
             path.push_back(at);
